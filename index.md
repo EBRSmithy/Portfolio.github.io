@@ -50,11 +50,11 @@ example methodology
 
 ### Overview
 
-Designed and implemented a three-floor organisational network in Cisco Packet Tracer using VLANs, router-on-a-stick and OSPF. The network provided departmental segmentation, inter-floor communication and basic network services.
+Designed and implemented a network in Cisco Packet Tracer using VLANs, router-on-a-stick and OSPF. The network provided departmental segmentation, inter-floor communication and basic network services.
 
 ### Objectives
 
-- Design a reliable and scalable multi-floor network
+- Design a reliable and scalable network for multiple floors
 - Implement VLANs for departmental segmentation
 - Configure inter-VLAN routing and OSPF
 - Configure and test network services
@@ -89,9 +89,9 @@ The network topology and IP addressing scheme were designed before configuring t
 - Routing and switching
 - OSPF
 - IP addressing and subnetting
-- Cisco IOS
+- Cisco Packet Tracer fundamentals
 - Network troubleshooting
-- Network device hardening
+- Device security
 
 
 ### Secure Network Implementation & Traffic Analysis
@@ -100,7 +100,7 @@ The network topology and IP addressing scheme were designed before configuring t
 
 ### Overview
 
-Designed and implemented a secure organisational network in Cisco Packet Tracer using VLSM, VLANs and ACLs. DHCP, Internet, web and email services were configured, with network traffic analysed using Packet Tracer's simulation tools.
+Designed and implemented a secure network in Cisco Packet Tracer using VLSM, VLANs and ACLs. DHCP, Internet, web and email services were configured, with network traffic analysed using Packet Tracer's simulation tools.
 
 ### Objectives
 
@@ -112,7 +112,7 @@ Designed and implemented a secure organisational network in Cisco Packet Tracer 
 
 ### Technologies Used
 
-- Cisco Packet Tracer
+- Cisco Packet Tracer simulation tools
 - VLANs
 - VLSM
 - Router-on-a-stick
@@ -120,15 +120,15 @@ Designed and implemented a secure organisational network in Cisco Packet Tracer 
 - DHCP
 - TCP/IP
 - ICMP
-- HTTP, SMTP and POP3
+- HTTP and SMTP
 
 ### Methodology
 
-VLSM was used to allocate appropriately sized subnets based on departmental requirements. VLANs were configured to separate departments, followed by router-on-a-stick for inter-VLAN routing. ACLs were implemented to restrict unauthorised communication between VLANs. DHCP and network services were configured before using Packet Tracer simulation mode to analyse and verify network traffic.
+VLSM was used to allocate appropriately sized subnets based on number of hosts. VLANs were configured to separate departments, followed by router-on-a-stick for inter-VLAN routing. ACLs were implemented to restrict unauthorised communication between VLANs. DHCP and network services were configured before using Packet Tracer simulation mode to analyse and verify network traffic.
 
 ### Key Findings
 
-- VLSM successfully created efficient, non-overlapping subnets
+- VLSM successfully created subnets with no overlaps
 - VLANs successfully segmented departmental networks
 - ACLs successfully restricted unauthorised VLAN communication
 - DHCP correctly assigned IP addresses
