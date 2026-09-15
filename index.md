@@ -147,3 +147,106 @@ VLSM was used to allocate appropriately sized subnets based on number of hosts. 
 - Access control
 - Network troubleshooting
 - Security verification
+
+# Programming
+
+### Secure Password Manager
+
+![Secure Password Manager](images/programming-coursework-1.png)
+
+### Overview
+
+Developed a secure password manager in Python using a command-line interface for creating accounts and retrieving stored passwords. Passwords were encrypted using Fernet and stored in an SQLite database, with the encryption key saved for reuse between sessions.
+
+### Objectives
+
+- Develop a secure password management system
+- Encrypt passwords before storing them
+- Store user information using SQLite
+- Validate user input and handle errors
+- Maintain encryption key persistence between sessions
+
+### Technologies Used
+
+- Python
+- Fernet encryption
+- SQLite
+- Object-oriented programming
+- OS library
+- Exception handling
+
+### Methodology
+
+The program used separate User and Manager classes to manage user information and password encryption. Usernames and passwords were validated before being stored, while passwords were encrypted using a Fernet key. The encrypted password was then stored in the SQLite database. The key was loaded from a file if it already existed or generated when required. Testing was carried out to verify encryption, database storage, password retrieval and key persistence.
+
+### Key Findings
+
+- Passwords were successfully encrypted before being stored
+- Encrypted passwords could be decrypted using the stored Fernet key
+- User information was successfully stored and retrieved from SQLite
+- Input validation prevented empty usernames and passwords
+- Key persistence allowed passwords to remain accessible after restarting the program
+- All documented tests passed
+
+### Skills Demonstrated
+
+- Python programming
+- Object-oriented programming
+- Symmetric encryption
+- SQLite database management
+- Input validation
+- Error handling
+- Debugging
+- Security-focused development
+
+
+### Security Log Ingestion & Anomaly Detection
+
+![Security Log Ingestion & Anomaly Detection](images/programming-coursework-2.png)
+
+### Overview
+
+Developed a Python program that ingests text and JSON log files, extracts relevant information and normalises the data before identifying potential security anomalies. The system detects multiple failed login attempts, blacklisted IP addresses and out-of-hours access before generating a daily summary file.
+
+### Objectives
+
+- Ingest text and JSON log files
+- Extract and parse relevant log information
+- Normalise log data into a consistent format
+- Detect suspicious or anomalous activity
+- Generate summary reports of detected anomalies
+
+### Technologies Used
+
+- Python
+- JSON
+- Datetime
+- OS library
+- Exception handling
+- File handling
+
+### Methodology
+
+The program first detects the type of log before ingesting the file. Log entries are then parsed to extract timestamps, IP addresses, user identifiers and event types. The data is normalised by filling missing information with unknown. Detection rules are then applied to identify multiple failed login attempts, blacklisted IP access, out-of-hours access and relevant JSON log events. Detected anomalies are formatted and written to a daily summary file.
+
+### Key Findings
+
+- Text and JSON logs were successfully ingested
+- Relevant log information was successfully extracted and parsed
+- Logs were successfully normalised into a consistent structure
+- Anomaly detection successfully identified suspicious log activity
+- Duplicate entries were controlled using sets
+- Daily summary files were successfully generated
+- Debugging resolved timestamp and JSON anomaly detection issues
+
+### Skills Demonstrated
+
+- Python programming
+- Log analysis
+- Security monitoring
+- Anomaly detection
+- Data parsing and normalisation
+- File handling
+- Debugging and testing
+- Security-focused problem solving
+
