@@ -148,6 +148,8 @@ VLSM was used to allocate appropriately sized subnets based on number of hosts. 
 - Network troubleshooting
 - Security verification
 
+---
+
 # Programming
 
 ### Secure Password Manager
@@ -249,4 +251,161 @@ The program first detects the type of log before ingesting the file. Log entries
 - File handling
 - Debugging and testing
 - Security-focused problem solving
+
+---
+
+# Computer Architecture and Operating Systems
+
+### General-Purpose Operating Systems & Process Management
+
+![General-Purpose Operating Systems](images/caos-coursework-1.png)
+
+### Overview
+
+Analysed the structure and operation of general-purpose and embedded operating systems, focusing on process management, memory management, file management and user interaction. The coursework also examined the security differences between general-purpose and embedded systems using a real-world vehicle security incident.
+
+### Objectives
+
+- Analyse the architecture of general-purpose operating systems
+- Compare general-purpose and embedded operating systems
+- Examine the lifecycle of processes
+- Understand memory and file management
+- Analyse operating system security considerations
+
+### Technologies Used
+
+- Linux
+- Operating system concepts
+- System calls
+- Process management
+- Virtual memory
+- File systems
+- Terminal and shell
+
+### Methodology
+
+The coursework examined how operating systems manage processes from creation to termination. The lifecycle of a process was analysed using system calls such as fork(), exec(), read(), write() and exit(). Memory allocation and virtual memory were also examined, alongside file permissions and terminal I/O. General-purpose and embedded operating systems were then compared in terms of architecture, functionality and security.
+
+### Key Findings
+
+- General-purpose operating systems support multiple processes and applications
+- User and kernel spaces provide different levels of access to system resources
+- System calls provide controlled access to operating system resources
+- Virtual memory provides isolation between processes
+- Embedded systems have reduced functionality but can still contain exploitable vulnerabilities
+- Poor configuration and exposed interfaces can increase security risks
+
+### Skills Demonstrated
+
+- Operating system analysis
+- Process management
+- Memory management
+- File management
+- Linux fundamentals
+- System call analysis
+- Security analysis
+- Operating system architecture
+
+
+### Binary Analysis and Reverse Engineering
+
+![Binary Analysis and Reverse Engineering](images/caos-coursework-2.png)
+
+### Overview
+
+Analysed a compiled binary to understand its authentication logic and identify weaknesses within the program. Debugging and disassembly techniques were used to examine functions, input handling, registers and control flow before identifying how the authentication mechanism could be bypassed.
+
+### Objectives
+
+- Analyse the structure of a compiled binary
+- Identify security protections within an executable
+- Examine program control flow using disassembly
+- Analyse registers and function behaviour
+- Identify weaknesses in client-side authentication
+
+### Technologies Used
+
+- Linux
+- GDB
+- Pwndbg
+- Assembly language
+- Binary analysis tools
+- Disassembly
+- Debugging
+
+### Methodology
+
+The binary was first examined to identify its type and architecture before being executed to understand its normal behaviour. Protection mechanisms were analysed using checksec, followed by function identification and disassembly. Breakpoints were placed at key functions including input handling and password comparison. Register analysis was then used to examine how user input and the stored passphrase were processed during authentication.
+
+### Key Findings
+
+- The binary contained authentication logic within the executable
+- User input was processed using scanf
+- The passphrase was compared using strcmp
+- Register analysis exposed the values used during authentication
+- The stored password could be identified during debugging
+- Client-side authentication logic can be vulnerable to reverse engineering
+
+### Skills Demonstrated
+
+- Reverse engineering
+- Binary analysis
+- GDB debugging
+- Assembly analysis
+- Register analysis
+- Disassembly
+- Vulnerability identification
+- Security analysis
+
+
+### Stack-Based Buffer Overflow Analysis
+
+![Stack-Based Buffer Overflow Analysis](images/caos-coursework-3.png)
+
+### Overview
+
+Analysed and exploited a stack-based buffer overflow vulnerability within a binary. The investigation examined missing protection mechanisms, identified an unsafe strcpy function and determined the offset required to overwrite the saved instruction pointer.
+
+### Objectives
+
+- Identify buffer overflow vulnerabilities
+- Analyse binary protection mechanisms
+- Examine stack memory and program execution
+- Determine the buffer overflow offset
+- Develop mitigations against buffer overflow attacks
+
+### Technologies Used
+
+- Linux
+- GDB
+- Pwndbg
+- checksec
+- Cyclic patterns
+- Assembly and disassembly
+- Stack analysis
+
+### Methodology
+
+The binary was analysed using checksec to identify enabled protection mechanisms. Disassembly was then used to identify the vulnerable function and the use of strcpy without bounds checking. A cyclic pattern was generated and used to determine the offset to the saved instruction pointer. A controlled input was then used to demonstrate that the return address could be overwritten, confirming successful stack corruption.
+
+### Key Findings
+
+- Stack canaries, NX and PIE protections were absent
+- The vulnerable function used strcpy without bounds checking
+- The buffer overflow offset was identified as 72 bytes
+- The saved instruction pointer could be overwritten
+- Controlled input caused the program to crash through stack corruption
+- Safer input functions and system-level protections can reduce the risk
+
+### Skills Demonstrated
+
+- Buffer overflow analysis
+- Vulnerability analysis
+- Binary exploitation
+- Stack analysis
+- GDB and Pwndbg
+- Memory corruption analysis
+- Security mitigation
+- Secure programming
+
 
